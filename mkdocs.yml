@@ -1,0 +1,107 @@
+site_name: minisklearn —— 从零实现 sklearn
+site_description: 理解设计哲学，拆解底层原理，从零手写一个 mini scikit-learn
+site_url: https://wanglh39.github.io/minisklearn/
+repo_url: https://github.com/wanglh39/minisklearn
+repo_name: wanglh39/minisklearn
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: 切换到暗色模式
+    - scheme: slate
+      primary: indigo
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: 切换到亮色模式
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - 首页: index.md
+  - 架构设计:
+    - architecture/01-unified-api.md
+    - architecture/02-mixin-design.md
+    - architecture/03-parameter-management.md
+    - architecture/04-meta-estimator.md
+    - architecture/05-data-convention.md
+    - architecture/06-consistency-testing.md
+    - architecture/07-config-and-evolution.md
+    - architecture/08-architecture-overview.md
+  - 算法实现:
+    - algorithms/index.md
+    - 预处理:
+      - algorithms/preprocessing/index.md
+    - 线性模型:
+      - algorithms/linear_model/index.md
+    - K近邻:
+      - algorithms/neighbors/index.md
+    - 决策树:
+      - algorithms/tree/index.md
+    - 集成学习:
+      - algorithms/ensemble/index.md
+    - 聚类:
+      - algorithms/cluster/index.md
+    - 降维:
+      - algorithms/decomposition/index.md
+    - 支持向量机:
+      - algorithms/svm/index.md
+    - 朴素贝叶斯:
+      - algorithms/naive_bayes/index.md
+    - 模型选择:
+      - algorithms/model_selection/index.md
+    - 流水线:
+      - algorithms/pipeline/index.md
+  - C++ 扩展:
+    - cpp_extension/index.md
+  - 教程:
+    - tutorials/index.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate: true
+  - pymdownx.details
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wanglh39/minisklearn
