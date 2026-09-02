@@ -87,8 +87,7 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate: true
+  - pymdownx.tabbed
   - pymdownx.details
   - admonition
   - toc:
